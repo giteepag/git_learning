@@ -1,0 +1,67 @@
+# Revert the latest commit
+git revert HEAD
+
+# Revert a specific commit
+git revert <commit-id>
+
+# Revert without opening the commit message editor
+git revert --no-edit HEAD
+
+# Revert a merge commit (choose the mainline parent)
+git revert -m 1 <merge-commit-id>
+
+# Revert without committing immediately
+git revert --no-commit <commit-id>
+
+# Abort an in-progress revert
+git revert --abort
+
+# Continue after resolving conflicts
+git add <file>
+git revert --continue
+
+# Inspect the revert commit
+git show HEAD
+
+# View recent history
+git log --oneline --graph --decorate -10
+
+
+
+
+==================================================================================
+
+# Move the current branch back one commit (preserve staging and files)
+git reset --soft HEAD~1
+
+# Move the current branch back one commit (unstage changes, preserve files)
+git reset --mixed HEAD~1
+
+# Same as --mixed
+git reset HEAD~1
+
+# Move the current branch back one commit and reset tracked files
+git reset --hard HEAD~1
+
+# Reset to a specific commit
+git reset --soft <commit-id>
+git reset --mixed <commit-id>
+git reset --hard <commit-id>
+
+# Unstage a specific file (preserve file changes)
+git reset HEAD -- <file>
+
+# Unstage all staged changes
+git reset
+
+# Inspect recent branch/HEAD movements
+git reflog
+
+
+==================================================================================
+
+git status
+git log --oneline --graph --decorate -10
+git diff
+git diff --cached
+git show HEAD
