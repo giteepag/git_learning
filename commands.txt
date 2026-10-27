@@ -1,1 +1,52 @@
+<<<<<<< Updated upstream
 Hey , this is test for fetch and pull
+=======
+1. Check current repository state
+
+# Show branch, staged, unstaged, and untracked changes
+git status
+
+# Compact status (great for daily use)
+git status -sb
+
+# Show current branch
+git branch --show-current
+
+# Show current commit ID
+git rev-parse HEAD
+
+
+# Show commits on local main but not on origin/main
+git log origin/main..main --oneline
+
+# Show commits with graph
+git log origin/main..main --graph --oneline --decorate
+
+# Show full details of the latest commit
+git show HEAD
+
+# Show latest commit with changed files only
+git show --stat HEAD
+
+# Best history view
+git log --graph --oneline --decorate --all
+
+# Last 5 commits
+git log -5 --oneline
+
+# Latest commit
+git log -1 --oneline
+
+
+Command	Purpose
+git status -sb	Quick repository status
+git log --graph --oneline --decorate --all	Best history view
+git log origin/main..main --oneline	Local commits not pushed
+git show HEAD	Inspect latest commit
+git diff	Unstaged changes
+git diff --cached	Staged changes
+git diff origin/main..main	Local vs GitHub
+git branch -vv	Branch tracking
+git fetch origin	Update remote references
+git push	Publish local commits
+>>>>>>> Stashed changes
